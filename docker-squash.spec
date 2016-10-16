@@ -10,7 +10,7 @@
 Summary:	Docker layer squashing tool
 Name:		docker-squash
 Version:	1.0.3
-Release:	0.1
+Release:	1
 License:	MIT
 Group:		Applications/System
 Source0:	https://github.com/goldmann/docker-squash/archive/%{version}/%{name}-%{version}.tar.gz
@@ -48,8 +48,6 @@ Tool to squash layers in Docker images.
 %package -n python-%{name}
 Summary:	Docker layer squashing tool
 Group:		Libraries/Python
-Requires:	python-docker
-Requires:	python-six
 Obsoletes:	python-docker-scripts <= 1.0.0-0.2.rc2
 
 %description -n python-%{name}
@@ -60,8 +58,6 @@ Python 2 version.
 %package -n python3-%{name}
 Summary:	Docker layer squashing tool
 Group:		Libraries/Python
-Requires:	python3-docker
-Requires:	python3-six
 Obsoletes:	python3-docker-scripts <= 1.0.0-0.2.rc2
 
 %description -n python3-%{name}
