@@ -10,7 +10,7 @@
 Summary:	Docker layer squashing tool
 Name:		docker-squash
 Version:	1.0.3
-Release:	1
+Release:	2
 License:	MIT
 Group:		Applications/System
 Source0:	https://github.com/goldmann/docker-squash/archive/%{version}/%{name}-%{version}.tar.gz
