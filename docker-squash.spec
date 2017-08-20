@@ -9,12 +9,12 @@
 %define		egg_name	docker_squash
 Summary:	Docker layer squashing tool
 Name:		docker-squash
-Version:	1.0.3
-Release:	2
+Version:	1.0.5
+Release:	1
 License:	MIT
 Group:		Applications/System
 Source0:	https://github.com/goldmann/docker-squash/archive/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	a18ba6fc9f80df48f74ca5bbc353d2ee
+# Source0-md5:	752f089b69bcfa73996ccef6176e1ac4
 URL:		https://github.com/goldmann/docker-squash
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
@@ -70,17 +70,11 @@ Python 3 version.
 
 %build
 %if %{with python3}
-%py_build
-%if %{with tests}
-py.test-%{py_ver} -v tests/test_unit*.py
-%endif
+%py_build %{?with_tests:test}
 %endif
 
 %if %{with python3}
-%py3_build
-%if %{with tests}
-py.test-%{py3_ver} -v tests/test_unit*.py
-%endif
+%py3_build %{?with_tests:test}
 %endif
 
 %install
